@@ -45,7 +45,7 @@ export async function findExistingService(client: AppRunnerClient, serviceName: 
 
 // Create a new service
 async function createService(client: AppRunnerClient, config: IActionParams): Promise<Service | undefined> {
-    info(`Creating service ${config.serviceName}`);
+    info(`Creating service ${config.serviceName} with VPC Connector ${config.networkConfig}`);
     const command = getCreateCommand(config);
     const createServiceResponse = await client.send(command);
     return createServiceResponse.Service;

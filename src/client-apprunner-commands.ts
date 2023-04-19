@@ -113,11 +113,11 @@ function getNetworkConfiguration(config: INetworkConfiguration): NetworkConfigur
     return {
         NetworkConfiguration: { 
             EgressConfiguration: { 
-               EgressType: getEgressType(config.vpcConnectorArn),
+               EgressType: "VPC",
                VpcConnectorArn: config.vpcConnectorArn
             },
             IngressConfiguration: { 
-               IsPubliclyAccessible: config.publicAccess
+               IsPubliclyAccessible: true
             }
          },
     };
