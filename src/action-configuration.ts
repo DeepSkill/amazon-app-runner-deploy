@@ -27,6 +27,7 @@ export interface ICreateOrUpdateActionParams {
     action: Actions.CreateOrUpdate;
     serviceName: string;
     sourceConfig: ICodeConfiguration | IImageConfiguration;
+    networkConfig: INetworkConfiguration;
     port: number;
     waitForService: boolean;
     waitTimeout: number;
@@ -36,6 +37,11 @@ export interface ICreateOrUpdateActionParams {
     environment?: Record<string, string>;
     tags: Tag[]
     autoScalingConfigArn?: string;
+}
+
+export interface INetworkConfiguration {
+    vpcConnectorArn: string;
+    publicAccess: boolean;
 }
 
 export type IActionParams = ICreateOrUpdateActionParams;
@@ -141,6 +147,7 @@ function getCreateOrUpdateConfig(): ICreateOrUpdateActionParams {
         cpu,
         memory,
         sourceConfig: imageUri ? getImageConfig(imageUri) : getSourceCodeConfig(),
+        networkConfig: getNetworkConfig(),
         environment: getEnvironmentVariables(envVarNames),
         tags: getTags(tags),
         autoScalingConfigArn: autoScalingConfigArn,
@@ -162,6 +169,13 @@ function getImageConfig(imageUri: string): IImageConfiguration {
         sourceType: 'image',
         imageUri,
         accessRoleArn: getInput('access-role-arn', { required: true }),
+    };
+}
+
+function getNetworkConfig(): INetworkConfiguration {
+    return {
+        vpcConnectorArn: getInput('vpc-connector-arn', { required: false }),
+        publicAccess: getInputBool('ingress-public-access', false),
     };
 }
 

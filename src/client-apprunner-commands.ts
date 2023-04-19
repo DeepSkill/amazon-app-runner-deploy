@@ -1,5 +1,5 @@
 import { CreateServiceCommand, DeleteServiceCommand, DescribeServiceCommand, ImageRepositoryType, ListServicesCommand, SourceConfiguration, UpdateServiceCommand, TagResourceCommand } from "@aws-sdk/client-apprunner";
-import { ICodeConfiguration, ICreateOrUpdateActionParams, IImageConfiguration } from "./action-configuration";
+import { ICodeConfiguration, ICreateOrUpdateActionParams, IImageConfiguration, INetworkConfiguration } from "./action-configuration";
 
 export function getCreateCommand(config: ICreateOrUpdateActionParams): CreateServiceCommand {
     return new CreateServiceCommand({
@@ -12,6 +12,7 @@ export function getCreateCommand(config: ICreateOrUpdateActionParams): CreateSer
         SourceConfiguration: (config.sourceConfig.sourceType == 'image')
             ? getImageSourceConfiguration(config.port, config.sourceConfig, config.environment)
             : getCodeSourceConfiguration(config.port, config.sourceConfig, config.environment),
+        NetworkConfiguration: getNetworkConfiguration(config.networkConfig),
         Tags: config.tags,
     });
 }
@@ -27,6 +28,7 @@ export function getUpdateCommand(serviceArn: string, config: ICreateOrUpdateActi
         SourceConfiguration: (config.sourceConfig.sourceType == 'image')
             ? getImageSourceConfiguration(config.port, config.sourceConfig, config.environment)
             : getCodeSourceConfiguration(config.port, config.sourceConfig, config.environment),
+        NetworkConfiguration: getNetworkConfiguration(config.networkConfig),
     });
 }
 
@@ -99,5 +101,24 @@ function getImageSourceConfiguration(port: number, config: IImageConfiguration, 
                 RuntimeEnvironmentVariables: runtimeEnvironmentVariables,
             }
         }
+    };
+}
+
+// Determine ECR image repository type
+function getEgressType(vpcConnectorArn: string) {
+    return vpcConnectorArn.length === 0
+}
+
+function getNetworkConfiguration(config: INetworkConfiguration): NetworkConfiguration {
+    return {
+        NetworkConfiguration: { 
+            EgressConfiguration: { 
+               EgressType: getEgressType(config.vpcConnectorArn),
+               VpcConnectorArn: config.vpcConnectorArn
+            },
+            IngressConfiguration: { 
+               IsPubliclyAccessible: config.publicAccess
+            }
+         },
     };
 }

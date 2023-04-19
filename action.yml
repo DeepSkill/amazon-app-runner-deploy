@@ -13,6 +13,12 @@ inputs:
   access-role-arn:
     description: 'ARN for IAM Role, if the App Runner service is configured with ECR image'
     required: false
+  vpc-connector-arn:
+    description: 'ARN for VPC connector to use for egress vpc access'
+    required: false
+  ingress-public-access:
+    description: 'is app runner publicly accessible for ingress connections'
+    required: false        
   repo:
     description: 'GitHub source repository URL. Cannot be set when "image" parameter is set.'
     required: false
