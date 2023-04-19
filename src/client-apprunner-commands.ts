@@ -106,7 +106,7 @@ function getImageSourceConfiguration(port: number, config: IImageConfiguration, 
 
 // Determine ECR image repository type
 function getEgressType(vpcConnectorArn: string) {
-    return vpcConnectorArn.length === 0
+   return vpcConnectorArn.length === 0 ? 'DEFAULT' : 'VPC'
 }
 
 function getNetworkConfiguration(config: INetworkConfiguration): NetworkConfiguration {
