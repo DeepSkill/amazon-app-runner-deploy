@@ -1,4 +1,4 @@
-import { CreateServiceCommand, DeleteServiceCommand, DescribeServiceCommand, ImageRepositoryType, ListServicesCommand, SourceConfiguration, UpdateServiceCommand, TagResourceCommand } from "@aws-sdk/client-apprunner";
+import { CreateServiceCommand, DeleteServiceCommand, DescribeServiceCommand, ImageRepositoryType, ListServicesCommand, SourceConfiguration, NetworkConfiguration, UpdateServiceCommand, TagResourceCommand } from "@aws-sdk/client-apprunner";
 import { ICodeConfiguration, ICreateOrUpdateActionParams, IImageConfiguration, INetworkConfiguration } from "./action-configuration";
 
 export function getCreateCommand(config: ICreateOrUpdateActionParams): CreateServiceCommand {
