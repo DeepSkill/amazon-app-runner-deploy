@@ -1,4 +1,4 @@
-import { CreateServiceCommand, DeleteServiceCommand, DescribeServiceCommand, ImageRepositoryType, ListServicesCommand, SourceConfiguration, NetworkConfiguration, UpdateServiceCommand, TagResourceCommand } from "@aws-sdk/client-apprunner";
+import { CreateServiceCommand, DeleteServiceCommand, DescribeServiceCommand, ImageRepositoryType, ListServicesCommand, SourceConfiguration, NetworkConfiguration, EgressConfiguration, UpdateServiceCommand, TagResourceCommand } from "@aws-sdk/client-apprunner";
 import { ICodeConfiguration, ICreateOrUpdateActionParams, IImageConfiguration, INetworkConfiguration } from "./action-configuration";
 
 export function getCreateCommand(config: ICreateOrUpdateActionParams): CreateServiceCommand {
@@ -106,7 +106,7 @@ function getImageSourceConfiguration(port: number, config: IImageConfiguration, 
 
 // Determine ECR image repository type
 function getEgressType(vpcConnectorArn: string) {
-   return vpcConnectorArn.length === 0 ? 'DEFAULT' : 'VPC'
+   return vpcConnectorArn.length === 0 ? EgressConfiguration.DEFAULT : EgressConfiguration.VPC
 }
 
 function getNetworkConfiguration(config: INetworkConfiguration): NetworkConfiguration {
