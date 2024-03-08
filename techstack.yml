@@ -1,0 +1,205 @@
+repo_name: DeepSkill/amazon-app-runner-deploy
+report_id: fa44a8cb26fdb1dce71c6ca4ea7c2a9c
+version: 0.1
+repo_type: Public
+timestamp: '2024-03-08T08:01:14+00:00'
+requested_by: thomas-leidinger
+provider: github
+branch: main
+detected_tools_count: 15
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy
+  detection_source: Repo Metadata
+- name: YAML
+  description: A straightforward machine parsable data serialization format designed
+    for human readability and interaction
+  website_url: http://www.yaml.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1744/yaml.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Hari Ohm Prasath
+  last_updated_on: 2021-10-08 14:54:09.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Hari Ohm Prasath
+  last_updated_on: 2021-10-08 14:54:09.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Hari Ohm Prasath
+  last_updated_on: 2021-10-08 14:54:09.000000000 Z
+- name: Esbuild
+  description: An extremely fast JavaScript bundler
+  website_url: https://esbuild.github.io/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/25166/default_2dcc9286a150737a14625d18f6f93747f72be430.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-30 15:59:04.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy
+  detection_source: Repo Metadata
+- name: Jest
+  description: Painless JavaScript Unit Testing
+  website_url: http://facebook.github.io/jest/
+  version: 29.7.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/830/jest.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Hari Ohm Prasath
+  last_updated_on: 2021-10-08 14:54:09.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Hari Ohm Prasath
+  last_updated_on: 2021-10-08 14:54:09.000000000 Z
+- name: "@aws-sdk/node-http-handler"
+  description: Provides a way to make requests
+  package_url: https://www.npmjs.com/@aws-sdk/node-http-handler
+  version: 3.374.0
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18209/default_249ac1898ea937d6138e031f56caffe966225b60.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-30 15:59:04.000000000 Z
+- name: "@types/jest"
+  description: TypeScript definitions for Jest
+  package_url: https://www.npmjs.com/@types/jest
+  version: 29.5.6
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15840/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-30 15:59:04.000000000 Z
+- name: "@typescript-eslint/eslint-plugin"
+  description: TypeScript plugin for ESLint
+  package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
+  version: 6.9.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-30 15:59:04.000000000 Z
+- name: "@typescript-eslint/parser"
+  description: An ESLint custom parser which leverages TypeScript ESTree
+  package_url: https://www.npmjs.com/@typescript-eslint/parser
+  version: 6.9.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-30 15:59:04.000000000 Z
+- name: ts-jest
+  description: A preprocessor with source maps support to help use TypeScript with
+    Jest
+  package_url: https://www.npmjs.com/ts-jest
+  version: 29.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15864/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-30 15:59:04.000000000 Z
+- name: ts-node
+  description: TypeScript execution environment and REPL for node.js
+  package_url: https://www.npmjs.com/ts-node
+  version: 10.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15830/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/DeepSkill/amazon-app-runner-deploy/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: DmitryGulin
+  last_updated_on: 2023-10-10 15:53:06.000000000 Z
